@@ -1,4 +1,5 @@
 var _ = require('lodash');
+var studentRoutes = require('./studentModel.js');
 
 module.exports = function(app){
 	_students = [];

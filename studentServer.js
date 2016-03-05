@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({
 	extended: true
 }));
 
-var students = require('./students.js')(app);
+var students = require('./routes/student.js')(app);
 
 app.get('/', function(req, res){
 	res.send('Hello World');
