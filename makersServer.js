@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
-    encoded: true
+    extended: true
 }));
 
 var coachRoutes = require('./routes/makersacademy.js');
