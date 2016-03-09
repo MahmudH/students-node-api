@@ -7,7 +7,7 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
-var coachRoutes = require('./routes/makersacademy.js');
+var makersRoutes = require('./routes/makersacademy.js')(app);
 
 var server = app.listen(3002, function() {
    console.log('Server running at http://127.0.0.1:3002/');
