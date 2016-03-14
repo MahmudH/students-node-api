@@ -3,6 +3,8 @@ var request = require('request').defaults({
 });
 
 var async = require('async');
+var redis = require('redis');
+var client = redis.createClient(6379, '127.0.0.1');
 
 module.exports = function(app) {
 //   Read
@@ -19,7 +21,7 @@ module.exports = function(app) {
                     });
             },
             coach: function(callback){
-                    request({uri: 'http://localhost:3000/student'}, function (error, response, body) {
+                    request({uri: 'http://localhost:3001/coach'}, function (error, response, body) {
                         if (!error && response.statusCode == 200) {
                             callback(null, body);
                         } else {
